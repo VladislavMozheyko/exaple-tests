@@ -15,6 +15,9 @@ public class BaseSeleniumPage {
     public static void setDriver(WebDriver webDriver) {
         driver = webDriver;
     }
+    public void openUrl(String url) {
+        driver.get(url);
+    }
     public WebElement waitElementIsVisible(WebElement element){
         new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_WAIT)).until(ExpectedConditions.visibilityOf(element));
         return element;
