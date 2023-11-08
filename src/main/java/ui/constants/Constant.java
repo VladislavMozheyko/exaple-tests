@@ -14,6 +14,7 @@ public class Constant {
         public static final String HEROKU_SIGNIN_TITLE="Heroku | Sign up";
         public static final String BBC_SIGNIN_TITLE="BBC – Sign in";
         public static final String BBC_REGISTER_TITLE="BBC – Register";
+        public static final String BBC_DATA_TITLE="BBC – Register – enter your date of birth";
     }
     public static class Values{
         public static final String FIRST_NAME=StringModifier.getUniqueString("tuzik");
@@ -21,6 +22,9 @@ public class Constant {
         public static final String EMAIL="zloytuzikvsehkusaet@gmail.com";
         public static final String COMPANY_NAME="vseh kusat";
         public static final Integer PAUSE=2;
+        public static final String DAY="11";
+        public static final String MONTH="10";
+        public static final String YEAR="2007";
 
     }
 }
