@@ -12,13 +12,15 @@ public class Constant {
     }
     public static class Titles{
         public static final String HEROKU_SIGNIN_TITLE="Heroku | Sign up";
-        public static final String BBC_SIGNIN_TITLE="BBC - Homepage";
+        public static final String BBC_SIGNIN_TITLE="BBC – Sign in";
+        public static final String BBC_REGISTER_TITLE="BBC – Register";
     }
     public static class Values{
         public static final String FIRST_NAME=StringModifier.getUniqueString("tuzik");
         public static final String LAST_NAME="zloy";
         public static final String EMAIL="zloytuzikvsehkusaet@gmail.com";
         public static final String COMPANY_NAME="vseh kusat";
+        public static final Integer PAUSE=2;
 
     }
 }
