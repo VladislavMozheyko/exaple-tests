@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import tests.core.BaseSeleniumTest;
 import ui.bbc_page.*;
-import ui.constants.StringModifier;
 
 import static ui.constants.Constant.Titles.*;
 import static ui.constants.Constant.Urls.BBC_HOME;
@@ -18,6 +17,8 @@ public class BbcTest extends BaseSeleniumTest {
         BbcCheckAgePage bbcCheckAgePage = new BbcCheckAgePage();
         BbcFillAgePage bbcFillAgePage = new BbcFillAgePage();
         BbcRegUserPage bbcRegUserPage = new BbcRegUserPage();
+        BbcFinishRegPage bbcFinishRegPage = new BbcFinishRegPage();
+        BbcCheckRegUser bbcCheckRegUser = new BbcCheckRegUser();
 
         bbcHomePage.openUrl(BBC_HOME);
         bbcHomePage.openSignIn();
@@ -30,5 +31,8 @@ public class BbcTest extends BaseSeleniumTest {
         Assertions.assertEquals(BBC_REG_USER_TITLE, bbcFillAgePage.getUserDataTitle());
         bbcRegUserPage.fillUserData(FIRST_NAME+"@mail.ru",PASSWORD);
         Assertions.assertEquals(BBC_SUCCESS_REG_TITLE,bbcRegUserPage.getConfirmRegTitle());
+        bbcFinishRegPage.finishReg();
+        Assertions.assertEquals(BBC_MAIN_PAGE_TITLE,bbcFinishRegPage.getMainPageTitle());
+        bbcCheckRegUser.checkUserReg();
     }
 }

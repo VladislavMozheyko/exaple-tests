@@ -19,6 +19,7 @@ public class Constant {
         public static final String BBC_DATA_TITLE = "BBC – Register – enter your date of birth";
         public static final String BBC_REG_USER_TITLE = "BBC – Register – enter your details";
         public static final String BBC_SUCCESS_REG_TITLE = "BBC – Register – thank you";
+        public static final String BBC_MAIN_PAGE_TITLE = "BBC - Homepage";
     }
 
     public static class Values {
@@ -26,7 +27,7 @@ public class Constant {
         public static final String LAST_NAME = "zloy";
         public static final String EMAIL = "zloytuzikvsehkusaet@gmail.com";
         public static final String COMPANY_NAME = "vseh kusat";
-        public static final Integer PAUSE = 2;
+        public static final Integer PAUSE = 3;
         public static final String DAY = "11";
         public static final String MONTH = "10";
         public static final String YEAR = "2007";
