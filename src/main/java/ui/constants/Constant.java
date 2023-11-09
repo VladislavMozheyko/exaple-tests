@@ -10,6 +10,7 @@ public class Constant {
     public static class Urls {
         public static final String HEROKU_HOME = "https://www.heroku.com/home";
         public static final String BBC_HOME = "https://www.bbc.com/";
+        public static final String REQRES = "https://reqres.in/";
     }
 
     public static class Titles {
@@ -28,10 +29,12 @@ public class Constant {
         public static final String EMAIL = "zloytuzikvsehkusaet@gmail.com";
         public static final String COMPANY_NAME = "vseh kusat";
         public static final Integer PAUSE = 3;
+        public static final Integer RESPONSE200 = 200;
         public static final String DAY = "11";
         public static final String MONTH = "10";
         public static final String YEAR = "2007";
         public static final String PASSWORD = "Nuikak12345";
+        public static final String GET_LIST_USERS = "api/users?page=2";
 
     }
 }

@@ -29,10 +29,10 @@ public class BbcTest extends BaseSeleniumTest {
         Assertions.assertEquals(BBC_DATA_TITLE, bbcCheckAgePage.getBbcRegisterTitle());
         bbcFillAgePage.fillData();
         Assertions.assertEquals(BBC_REG_USER_TITLE, bbcFillAgePage.getUserDataTitle());
-        bbcRegUserPage.fillUserData(FIRST_NAME+"@mail.ru",PASSWORD);
-        Assertions.assertEquals(BBC_SUCCESS_REG_TITLE,bbcRegUserPage.getConfirmRegTitle());
+        bbcRegUserPage.fillUserData(FIRST_NAME + "@mail.ru", PASSWORD);
+        Assertions.assertEquals(BBC_SUCCESS_REG_TITLE, bbcRegUserPage.getConfirmRegTitle());
         bbcFinishRegPage.finishReg();
-        Assertions.assertEquals(BBC_MAIN_PAGE_TITLE,bbcFinishRegPage.getMainPageTitle());
+        Assertions.assertEquals(BBC_MAIN_PAGE_TITLE, bbcFinishRegPage.getMainPageTitle());
         bbcCheckRegUser.checkUserReg();
     }
 }

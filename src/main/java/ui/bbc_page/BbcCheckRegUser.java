@@ -14,14 +14,16 @@ public class BbcCheckRegUser extends BaseSeleniumPage {
     @FindBy(xpath = "//a[@id='idcta-link']")
     private WebElement yourAccountBtn;
     @FindBy(xpath = "//a[@href='/account/settings'][@class='link link--primary primary-nav__link']")
-            private WebElement settingsBtn;
+    private WebElement settingsBtn;
     @FindBy(xpath = "//div[@class='field__input'][1]")
-            private WebElement userEmail;
-    Actions actions= new Actions(driver);
-    public BbcCheckRegUser(){
-        PageFactory.initElements(driver,this);
+    private WebElement userEmail;
+    Actions actions = new Actions(driver);
+
+    public BbcCheckRegUser() {
+        PageFactory.initElements(driver, this);
     }
-    public BbcCheckRegUser checkUserReg(){
+
+    public BbcCheckRegUser checkUserReg() {
         actions
                 .pause(Duration.ofSeconds(PAUSE))
                 .moveToElement(yourAccountBtn)
@@ -35,7 +37,8 @@ public class BbcCheckRegUser extends BaseSeleniumPage {
                 .build().perform();
         return this;
     }
-    public String getUserEmail(){
+
+    public String getUserEmail() {
         return userEmail.getText();
     }
 }

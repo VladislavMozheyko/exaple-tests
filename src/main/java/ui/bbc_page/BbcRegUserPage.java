@@ -18,10 +18,12 @@ public class BbcRegUserPage extends BaseSeleniumPage {
     @FindBy(xpath = "//button[@id='submit-button']")
     private WebElement regBtn;
     Actions actions = new Actions(driver);
-    public BbcRegUserPage(){
-        PageFactory.initElements(driver,this);
+
+    public BbcRegUserPage() {
+        PageFactory.initElements(driver, this);
     }
-    public BbcRegUserPage fillUserData(String email,String password){
+
+    public BbcRegUserPage fillUserData(String email, String password) {
         actions
                 .moveToElement(emailField)
                 .click()
@@ -35,7 +37,8 @@ public class BbcRegUserPage extends BaseSeleniumPage {
                 .build().perform();
         return this;
     }
-    public String getConfirmRegTitle(){
+
+    public String getConfirmRegTitle() {
         return driver.getTitle();
     }
 }

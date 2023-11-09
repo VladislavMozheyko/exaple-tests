@@ -16,10 +16,12 @@ public class BbcFinishRegPage extends BaseSeleniumPage {
     @FindBy(xpath = "//button[@id='submit-button']")
     private WebElement finishBtn;
     Actions actions = new Actions(driver);
-    public BbcFinishRegPage (){
-        PageFactory.initElements(driver,this);
+
+    public BbcFinishRegPage() {
+        PageFactory.initElements(driver, this);
     }
-    public BbcFinishRegPage finishReg(){
+
+    public BbcFinishRegPage finishReg() {
         actions
                 .moveToElement(noBtn)
                 .click()
@@ -30,7 +32,8 @@ public class BbcFinishRegPage extends BaseSeleniumPage {
                 .perform();
         return this;
     }
-    public String getMainPageTitle(){
+
+    public String getMainPageTitle() {
         return driver.getTitle();
     }
 }

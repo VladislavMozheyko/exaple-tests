@@ -12,13 +12,16 @@ import static ui.constants.Constant.TimeOutVariable.EXPLICIT_WAIT;
 
 public class BaseSeleniumPage {
     protected static WebDriver driver;
+
     public static void setDriver(WebDriver webDriver) {
         driver = webDriver;
     }
+
     public void openUrl(String url) {
         driver.get(url);
     }
-    public WebElement waitElementIsVisible(WebElement element){
+
+    public WebElement waitElementIsVisible(WebElement element) {
         new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_WAIT)).until(ExpectedConditions.visibilityOf(element));
         return element;
     }
