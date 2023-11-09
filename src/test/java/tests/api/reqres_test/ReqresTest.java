@@ -1,6 +1,7 @@
 package tests.api.reqres_test;
 
 import api.reqres.SuccessUserRegistration;
+import api.reqres.UnSuccessRegistration;
 import api.reqres.UserData;
 import api.reqres.UserRegistration;
 import api.specifications.Specifications;
@@ -16,7 +17,8 @@ import static ui.constants.Constant.Values.*;
 public class ReqresTest {
     @Test
     public void testAvatarAndIdTest() {
-        Specifications.installSpecification(Specifications.requestSpecification(REQRES), (Specifications.responseSpecification(RESPONSE200)));
+        Specifications.installSpecification
+                (Specifications.requestSpecification(REQRES), (Specifications.responseSpecification(RESPONSE200)));
         List<UserData> users = given()
                 .when()
                 .get(LIST_USERS)
@@ -27,8 +29,9 @@ public class ReqresTest {
     }
 
     @Test
-    public void successRegister() {
-        Specifications.installSpecification(Specifications.requestSpecification(REQRES), Specifications.responseSpecification(RESPONSE200));
+    public void successRegisterTest() {
+        Specifications.installSpecification
+                (Specifications.requestSpecification(REQRES), Specifications.responseSpecification(RESPONSE200));
         Integer id = 4;
         String token = "QpwL5tke4Pnpja7X4";
         UserRegistration userReg = new UserRegistration("eve.holt@reqres.in", "pistol");
@@ -44,5 +47,23 @@ public class ReqresTest {
         Assertions.assertNotNull(successReg.getToken());
         Assertions.assertEquals(id, successReg.getId());
         Assertions.assertEquals(token, successReg.getToken());
+    }
+
+    @Test
+    public void unSuccessRegisterTest() {
+        Specifications.installSpecification
+                (Specifications.requestSpecification(REQRES), Specifications.responseSpecification(RESPONSE400));
+        String error = "Missing password";
+        UserRegistration userReg = new UserRegistration("sydney@fife", "");
+        UnSuccessRegistration unSuccessReg = given()
+                .body(userReg)
+                .when()
+                .post(REGISTER_SUCCESSFUL)
+                .then()
+                .log().all()
+                .extract()
+                .as(UnSuccessRegistration.class);
+        Assertions.assertNotNull(unSuccessReg.getError());
+        Assertions.assertEquals(error, unSuccessReg.getError());
     }
 }

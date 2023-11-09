@@ -30,6 +30,7 @@ public class Constant {
         public static final String COMPANY_NAME = "vseh kusat";
         public static final Integer PAUSE = 3;
         public static final Integer RESPONSE200 = 200;
+        public static final Integer RESPONSE400 = 400;
         public static final String DAY = "11";
         public static final String MONTH = "10";
         public static final String YEAR = "2007";
