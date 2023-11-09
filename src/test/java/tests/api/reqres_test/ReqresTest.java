@@ -5,6 +5,7 @@ import api.specifications.Specifications;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.time.Clock;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -82,14 +83,30 @@ public class ReqresTest {
         List<Integer> sortedYears = years.stream().sorted().collect(Collectors.toList());
         Assertions.assertEquals(sortedYears, years);
     }
+
     @Test
-    public void deleteUserTest(){
+    public void deleteUserTest() {
         Specifications.installSpecification
-                (Specifications.requestSpecification(REQRES),Specifications.responseSpecification(RESPONSE204));
+                (Specifications.requestSpecification(REQRES), Specifications.responseSpecification(RESPONSE204));
         given()
                 .when()
-                .delete(DEL_USER_2)
+                .delete(USER_2)
                 .then()
                 .log().all();
+    }
+
+    @Test
+    public void addUserInfoTest() {
+        Specifications.installSpecification
+                (Specifications.requestSpecification(REQRES), Specifications.responseSpecification(RESPONSE200));
+        UserUpdate userUpdate = new UserUpdate("morpheus", "zion resident");
+        UpdatedUserInfo updatedUserInfo = given()
+                .body(userUpdate)
+                .when()
+                .put(USER_2)
+                .then()
+                .log().all()
+                .extract()
+                .as(UpdatedUserInfo.class);
     }
 }
