@@ -34,7 +34,8 @@ public class Constant {
         public static final String MONTH = "10";
         public static final String YEAR = "2007";
         public static final String PASSWORD = "Nuikak12345";
-        public static final String GET_LIST_USERS = "api/users?page=2";
+        public static final String LIST_USERS = "api/users?page=2";
+        public static final String REGISTER_SUCCESSFUL = "api/register";
 
     }
 }
