@@ -82,4 +82,14 @@ public class ReqresTest {
         List<Integer> sortedYears = years.stream().sorted().collect(Collectors.toList());
         Assertions.assertEquals(sortedYears, years);
     }
+    @Test
+    public void deleteUserTest(){
+        Specifications.installSpecification
+                (Specifications.requestSpecification(REQRES),Specifications.responseSpecification(RESPONSE204));
+        given()
+                .when()
+                .delete(DEL_USER_2)
+                .then()
+                .log().all();
+    }
 }

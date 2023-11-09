@@ -31,6 +31,7 @@ public class Constant {
         public static final Integer PAUSE = 3;
         public static final Integer RESPONSE200 = 200;
         public static final Integer RESPONSE400 = 400;
+        public static final Integer RESPONSE204 = 204;
         public static final String DAY = "11";
         public static final String MONTH = "10";
         public static final String YEAR = "2007";
@@ -38,6 +39,7 @@ public class Constant {
         public static final String LIST_USERS = "api/users?page=2";
         public static final String REGISTER_SUCCESSFUL = "api/register";
         public static final String LIST_RESOURCE = "api/unknown";
+        public static final String DEL_USER_2 = "api/users/2";
 
     }
 }
