@@ -1,14 +1,12 @@
 package tests.api.reqres_test;
 
-import api.reqres.SuccessUserRegistration;
-import api.reqres.UnSuccessRegistration;
-import api.reqres.UserData;
-import api.reqres.UserRegistration;
+import api.reqres.*;
 import api.specifications.Specifications;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static io.restassured.RestAssured.given;
 import static ui.constants.Constant.Urls.REQRES;
@@ -65,5 +63,23 @@ public class ReqresTest {
                 .as(UnSuccessRegistration.class);
         Assertions.assertNotNull(unSuccessReg.getError());
         Assertions.assertEquals(error, unSuccessReg.getError());
+    }
+
+    @Test
+    public void checkYearsValueTest() {
+        Specifications.installSpecification
+                (Specifications.requestSpecification(REQRES), Specifications.responseSpecification(RESPONSE200));
+        List<SortedDataByYears> sortedDataByYears = given()
+                .when()
+                .get(LIST_RESOURCE)
+                .then()
+                .log().all()
+                .extract()
+                .body()
+                .jsonPath()
+                .getList("data", SortedDataByYears.class);
+        List<Integer> years = sortedDataByYears.stream().map(SortedDataByYears::getYear).collect(Collectors.toList());
+        List<Integer> sortedYears = years.stream().sorted().collect(Collectors.toList());
+        Assertions.assertEquals(sortedYears, years);
     }
 }

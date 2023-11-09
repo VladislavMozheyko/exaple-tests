@@ -37,6 +37,7 @@ public class Constant {
         public static final String PASSWORD = "Nuikak12345";
         public static final String LIST_USERS = "api/users?page=2";
         public static final String REGISTER_SUCCESSFUL = "api/register";
+        public static final String LIST_RESOURCE = "api/unknown";
 
     }
 }
