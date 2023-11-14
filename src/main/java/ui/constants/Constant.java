@@ -11,6 +11,7 @@ public class Constant {
         public static final String HEROKU_HOME = "https://www.heroku.com/home";
         public static final String BBC_HOME = "https://www.bbc.com/";
         public static final String REQRES = "https://reqres.in/";
+        public static final String APPLE_HOME = "https://appleinsider.ru/";
     }
 
     public static class Titles {
@@ -40,6 +41,8 @@ public class Constant {
         public static final String REGISTER_SUCCESSFUL = "api/register";
         public static final String LIST_RESOURCE = "api/unknown";
         public static final String USER_2 = "api/users/2";
+        public static final String APPLE_SEARCH = "Чем iphone 13 отличается от iphone 12";
+        public static final String CONTAINS_APPLE = "iphone-13";
 
     }
 }

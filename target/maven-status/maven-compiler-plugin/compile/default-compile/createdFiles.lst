@@ -1,4 +1,5 @@
 api\reqres\UserRegistration.class
+ui\apple_page\AppleSearchPage.class
 ui\bbc_page\BbcFinishRegPage.class
 ui\bbc_page\BbcCheckAgePage.class
 api\reqres\SuccessUserRegistration.class
@@ -18,6 +19,7 @@ ui\constants\Constant$Values.class
 ui\constants\Constant$Titles.class
 ui\pages\heroku_page\HerokuHomePage.class
 ui\bbc_page\BbcFillAgePage.class
+ui\apple_page\AppleHomePage.class
 ui\constants\Constant$TimeOutVariable.class
 api\reqres\SortedDataByYears.class
 api\specifications\Specifications.class

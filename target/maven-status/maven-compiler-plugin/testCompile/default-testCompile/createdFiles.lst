@@ -1,5 +1,7 @@
 tests\api\reqres_test\ReqresTest.class
 tests\core\BaseSeleniumTest.class
 tests\ui\heroku_test\HerokuTest.class
+tests\ui\selenide_apple_test\AppleTest.class
 tests\ui\bbc_test\BbcTest.class
+tests\core\BaseSelenideTest.class
 tests\api\reqres_test\ReqresNoPojoTest.class

@@ -22,52 +22,67 @@
         </allure.cmd.download.url>
     </properties>
 <dependencies>
+
+    <dependency>
+        <groupId>com.codeborne</groupId>
+        <artifactId>selenide</artifactId>
+        <version>6.17.0</version>
+    </dependency>
+
     <dependency>
         <groupId>org.seleniumhq.selenium</groupId>
         <artifactId>selenium-java</artifactId>
-        <version>4.15.0</version>
+        <version>4.11.0</version>
     </dependency>
+
     <dependency>
         <groupId>org.junit.jupiter</groupId>
         <artifactId>junit-jupiter-api</artifactId>
         <version>${junit.api.version}</version>
         <scope>test</scope>
     </dependency>
+
     <dependency>
         <groupId>org.junit.jupiter</groupId>
         <artifactId>junit-jupiter-params</artifactId>
         <version>${junit.jupiter.version}</version>
         <scope>test</scope>
     </dependency>
+
     <dependency>
         <groupId>io.rest-assured</groupId>
         <artifactId>rest-assured</artifactId>
         <version>5.3.0</version>
         <scope>test</scope>
     </dependency>
+
     <dependency>
         <groupId>org.junit.jupiter</groupId>
         <artifactId>junit-jupiter-engine</artifactId>
         <version>${junit.jupiter.version}</version>
         <scope>test</scope>
     </dependency>
+
     <dependency>
         <groupId>io.github.bonigarcia</groupId>
         <artifactId>webdrivermanager</artifactId>
-        <version>5.6.1</version>
+        <version>5.5.3</version>
     </dependency>
+
     <dependency>
         <groupId>io.rest-assured</groupId>
         <artifactId>rest-assured</artifactId>
         <version>5.3.0</version>
         <scope>compile</scope>
     </dependency>
+
     <dependency>
         <groupId>io.qameta.allure</groupId>
         <artifactId>allure-junit5</artifactId>
         <version>2.14.0</version>
         <scope>test</scope>
     </dependency>
+
     <dependency>
         <groupId>io.qameta.allure</groupId>
         <artifactId>allure-rest-assured</artifactId>
