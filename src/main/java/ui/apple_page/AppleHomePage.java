@@ -2,6 +2,7 @@ package ui.apple_page;
 
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
+import jdk.jfr.Description;
 
 import static com.codeborne.selenide.Selenide.$x;
 
@@ -16,7 +17,10 @@ public class AppleHomePage {
         searchBtn.pressEnter();
     }
 
-    public AppleHomePage(String url) {
+    public AppleHomePage() {
+    }
+
+    public void openUrl(String url) {
 
         Selenide.open(url);
     }
